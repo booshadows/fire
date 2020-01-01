@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="//cdn.web-fonts.ge/fonts/bpg-nino-mtavruli-book/css/bpg-nino-mtavruli-book.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -17,10 +18,27 @@
     <div id="fullPage">
         <!-- Header -->
     <header class="section">
-        <div class="header-top">
-                <div class="logo"><img src="img/LOGO_2018_GE.png" alt=""></div>
-                <div class="phone">+995 322 444 999</div>
+        <div class="header-bg">
+        <div class="container">
+        <div class="row header-top">
+                <div class="col-lg-6 logo"><img src="img/LOGO_2018_GE.png" alt=""></div>
+                <div class="col-lg-6 phone">+995 322 444 999</div>
         </div>
+        <div class="header-center row">
+            <div class="col-lg-6 col-sm-12">
+            <h2>ხანძრის დაზღვევა</h2>
+            <p>დააზღვიე შენი ბინა ონლაინ და სადაზღვევო შემთხვევის დადგომისას მიიღე ანაზღაურება წლიური ლიმიტით 50 000 ₾</p>
+            <button>ყიდვა</button>
+        </div>
+        </div>
+    </div>
+    <div class="fire-dude">
+        <img src="img/background-object.png" alt="">
+    </div>
+   <div class="move-down bounce" id="moveDown">
+    <img src="img/Group 1.png" alt="">
+   </div>
+</div>
     </header>
     <div class="section">
         <h1>Second Section</h1>
@@ -28,7 +46,11 @@
     </div>
 
 
-    
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
 <script src="js/index.js"></script>
 </body>
