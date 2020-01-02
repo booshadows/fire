@@ -7,3 +7,26 @@
   @mixin transition {
     transition: all 0.3s;
   }
+
+  @mixin line {
+    width: 1%;
+    position: absolute;
+    background-color: $green;
+    height: 0.8rem;
+  }
+
+  @mixin green-btn {
+        color: #fff;
+        font-size: 3rem;
+        background-color: $green;
+        text-align: center;
+        -webkit-box-shadow: 3px 10px 10px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 3px 10px 10px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 3px 10px 10px 0px rgba(0, 0, 0, 0.5);
+        width: 26rem;
+        height: 6.5rem;
+        border-radius: 4rem;
+        &:hover {
+          background: lighten( $green, 3% );
+        }
+  }

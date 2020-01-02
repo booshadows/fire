@@ -74,3 +74,35 @@ const scene = new ScrollMagic.Scene({
 .setTween(tween)
 .addIndicators()
 .addTo(controller);
+
+// section 3 animation
+
+var tween2 = new TimelineMax()
+.add(TweenMax.to('.line2', 2, {width: '15%', delay: 0.3}))
+// doesnt work idk why
+// .add(TweenMax.to('.a6', 0.5, {opacity: 1}))
+// .add(TweenMax.to('.a7', 0.5, {opacity: 1}))
+// .add(TweenMax.to('.a8', 0.5, {opacity: 1}));
+
+const controller2 = new ScrollMagic.Controller();
+
+const scene2 = new ScrollMagic.Scene({
+  triggerElement: '.s3'
+})
+.setTween(tween2)
+.addIndicators()
+.addTo(controller2)
+
+// section 4 animation
+
+var tween3 = new TimelineMax()
+.add(TweenMax.to('.line3', 2, {width: '15%', delay: 0.3}))
+
+const controller3 = new ScrollMagic.Controller();
+
+const scene3 = new ScrollMagic.Scene({
+  triggerElement: '.s4'
+})
+.setTween(tween3)
+.addIndicators()
+.addTo(controller3)
