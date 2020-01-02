@@ -4,6 +4,12 @@ body {
   font-family: "BPG Nino Mtavruli Book", sans-serif;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 // variables
 
 $green: #00ce94;
@@ -66,7 +72,7 @@ $green: #00ce94;
     
   }
 
-
+ // header
 header {
   .header-bg {
     height: 90%;
@@ -148,3 +154,77 @@ header {
     }
   }
 }
+
+// section 2
+
+.s2 {
+  .s2-bg {
+    background-image: url('../img/Union\ 1@2x.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100%;
+    .title {
+      position: relative;
+      h2 {
+        font-size: 4.3rem;
+        text-align: center;
+        margin-top: 10rem;
+        opacity: 0;
+      }
+      .line {
+        position: absolute;
+        background-color: $green;
+        bottom: -2rem;
+        width: 1%;
+        height: 0.8rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .box {
+      margin-top: 15rem;
+      @include center;
+      flex-direction: column;
+      background-color: #EFEFEF;
+      -webkit-box-shadow: 3px 0px 10px 0px rgba(0,0,0,0.3);
+      -moz-box-shadow: 3px 0px 10px 0px rgba(0,0,0,0.3);
+      box-shadow: 3px 0px 10px 0px rgba(0,0,0,0.3);
+      padding: 1rem 0;
+      height: 40rem;
+      background-image: url('../img/Group\ 3.png');
+      background-repeat: no-repeat;
+      background-size: 91%;
+      background-position: 1.5rem 1.5rem;
+      cursor: pointer;
+      opacity: 0;
+      @include transition;
+      &:hover {
+        transform: scale(1.1);
+      }
+      h5 {
+        font-size: 3rem;
+        color: #003642;
+        margin: 0;
+        text-align: center;
+        margin-top: 3rem;
+      }
+      p {
+        color: #53575A;
+        font-size: 2rem;
+        margin: 0;
+        text-align: center;
+        margin-top: 1rem;
+      }
+    }
+
+  }
+}
+
+ // seciton 3
+
+ .s3 {
+   .s3-bg {
+     
+   }
+ }

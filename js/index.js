@@ -53,3 +53,24 @@ TweenMax.to(".move-down ", 3, {
   opacity:1,
   ease: Expo.easeInOut
 });
+
+ // animations on scroll
+var tween = new TimelineMax()
+    .add(TweenMax.to('.a5', 0.3, {opacity: 1, delay: 0.1}))
+    .add(TweenMax.to('.line', 0.9, {width: '7%', delay:0.2}))
+    .add(TweenMax.to('#first-box', 0.5, {opacity: 1, delay:0.1}))
+    .add(TweenMax.to('#second-box', 0.5, {opacity: 1, delay:0.2}))
+    .add(TweenMax.to('#third-box', 0.5, {opacity: 1, delay:0.3}));
+
+
+
+    // scrolmagic
+const controller = new ScrollMagic.Controller();
+
+const scene = new ScrollMagic.Scene({
+  triggerElement: '.s2',
+  // duration: 1000,
+})
+.setTween(tween)
+.addIndicators()
+.addTo(controller);
