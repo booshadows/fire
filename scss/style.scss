@@ -13,6 +13,7 @@ body {
 // variables
 
 $green: #00ce94;
+$blue: #003642;
 
 // rm styling
 
@@ -225,7 +226,7 @@ header {
 
       h5 {
         font-size: 3rem;
-        color: #003642;
+        color: $blue;
         margin: 0;
         text-align: center;
         margin-top: 3rem;
@@ -500,7 +501,7 @@ header {
 
     .number-menu {
       height: 30rem;
-      background-color: #003642;
+      background-color: $blue;
       position: relative;
       width: 3rem;
       border-radius: 15rem;
@@ -533,7 +534,7 @@ header {
       .not-active {
         font-size: 0px;
         border: 0px solid #fff;
-        background-color: #003642;
+        background-color: $blue;
         width: 3rem;
         height: 2.5rem;
         left: -0.5rem;
@@ -559,5 +560,27 @@ header {
   .line5 {
     @include line;
     top: 10rem;
+  }
+}
+
+.s6 {
+  
+  .title {
+    margin-top: 10rem;
+    color: #fff;
+    font-size: 3rem;
+    background-color: $blue;
+    border-top-left-radius: 63px;
+    border-top-right-radius: 46px;
+    border-bottom-right-radius: 17px;
+    width: 30rem;
+    height: 6rem;
+    @include center;
+    margin-bottom: 3rem;
+  }
+  .box {
+    padding: 4.5rem;
+    background-color: #fff;
+    
   }
 }
