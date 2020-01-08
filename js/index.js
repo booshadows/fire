@@ -5,7 +5,7 @@ new fullpage("#fullPage", {
 });
 
 // move section down one
-$(document).on("click", "#moveDown", function() {
+$(document).on("click", "#moveDown", function () {
   fullpage_api.moveSectionDown();
 });
 
@@ -91,9 +91,9 @@ var tween = new TimelineMax()
 const controller = new ScrollMagic.Controller();
 
 const scene = new ScrollMagic.Scene({
-  triggerElement: ".s2"
-  // duration: 1000,
-})
+    triggerElement: ".s2"
+    // duration: 1000,
+  })
   .setTween(tween)
   .addTo(controller);
 
@@ -113,8 +113,8 @@ var tween2 = new TimelineMax().add(
 const controller2 = new ScrollMagic.Controller();
 
 const scene2 = new ScrollMagic.Scene({
-  triggerElement: ".s3"
-})
+    triggerElement: ".s3"
+  })
   .setTween(tween2)
   .addTo(controller2);
 
@@ -130,8 +130,8 @@ var tween3 = new TimelineMax().add(
 const controller3 = new ScrollMagic.Controller();
 
 const scene3 = new ScrollMagic.Scene({
-  triggerElement: ".s4"
-})
+    triggerElement: ".s4"
+  })
   .setTween(tween3)
   .addTo(controller3);
 
@@ -147,8 +147,8 @@ var tween4 = new TimelineMax().add(
 const controller4 = new ScrollMagic.Controller();
 
 const scene4 = new ScrollMagic.Scene({
-  triggerElement: ".s5"
-})
+    triggerElement: ".s5"
+  })
   .setTween(tween4)
   .addTo(controller4);
 
@@ -163,8 +163,8 @@ var tween5 = new TimelineMax().add(
 const controller5 = new ScrollMagic.Controller();
 
 const scene5 = new ScrollMagic.Scene({
-  triggerElement: ".s6"
-})
+    triggerElement: ".s6"
+  })
   .setTween(tween5)
   .addTo(controller5);
 
@@ -179,8 +179,84 @@ var tween6 = new TimelineMax().add(
 const controller6 = new ScrollMagic.Controller();
 
 const scene6 = new ScrollMagic.Scene({
-  triggerElement: "#s7-animation"
-})
+    triggerElement: "#s7-animation"
+  })
   .setTween(tween6)
   .addIndicators()
   .addTo(controller6);
+
+// section 8 animation
+var tween7 = new TimelineMax().add(
+  TweenMax.to(".line8", 3, {
+    width: "15%",
+    delay: 0.3
+  })
+);
+
+const controller7 = new ScrollMagic.Controller();
+
+const scene7 = new ScrollMagic.Scene({
+    triggerElement: "#s-8"
+  })
+  .setTween(tween7)
+  .addIndicators()
+  .addTo(controller7);
+
+// let clickPlus = 0;
+
+// $('#plus').click(function () {
+
+
+//   if (clickPlus == 0) {
+//     $('.svgs svg:first-child').removeClass('active-svg');
+//     $('#two').addClass('active-svg');
+//   } else {
+//     $('#two').removeClass('active-svg');
+//     $('.svgs svg:last-child').addClass('active-svg');
+//   }
+//   ++clickPlus;
+//   console.log(clickPlus);
+// });
+
+$('#plus').click(function () {
+  var clicks = $(this).data('clicks');
+  if (clicks) {
+    $('.svgs svg:first-child').removeClass('active-svg');
+    $('#two').removeClass('active-svg');
+    $('.svgs svg:last-child').addClass('active-svg');
+  } else {
+    $('.svgs svg:first-child').removeClass('active-svg');
+    $('#two').addClass('active-svg');
+    // $('#two').removeClass('active-svg');
+    $('.svgs svg:last-child').removeClass('active-svg');
+  }
+  $(this).data("clicks", !clicks);
+});
+
+$('#minus').click(function () {
+  var clicks = $(this).data('clicks');
+  if (clicks) {
+    $('.svgs svg:first-child').addClass('active-svg');
+    $('#two').removeClass('active-svg');
+  } else {
+    $('.svgs svg:last-child').removeClass('active-svg');
+    $('#two').addClass('active-svg');
+    // $('.svgs svg:first-child').addClass('active-svg');
+  }
+  $(this).data("clicks", !clicks);
+});
+
+// let clickMinus = 0;
+
+// $('#minus').click(function () {
+
+
+//   if (clickMinus == 0) {
+//     $('.svgs svg:last-child').removeClass('active-svg');
+//     $('#two').addClass('active-svg');
+//   } else {
+//     $('#two').removeClass('active-svg');
+//     $('.svgs svg:first-child').addClass('active-svg');
+//   }
+//   ++clickMinus;
+// });
