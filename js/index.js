@@ -1,11 +1,11 @@
 //fullpagejs
 
-new fullpage('#fullPage', {
+new fullpage("#fullPage", {
   autoScrolling: true
 });
 
 // move section down one
-$(document).on('click', '#moveDown', function () {
+$(document).on("click", "#moveDown", function() {
   fullpage_api.moveSectionDown();
 });
 
@@ -56,47 +56,55 @@ TweenMax.to(".move-down ", 3, {
 
 // animations on scroll
 var tween = new TimelineMax()
-  .add(TweenMax.to('.a5', 0.3, {
-    opacity: 1,
-    delay: 0.1
-  }))
-  .add(TweenMax.to('.line', 0.9, {
-    width: '7%',
-    delay: 0.2
-  }))
-  .add(TweenMax.to('#first-box', 0.5, {
-    opacity: 1,
-    delay: 0.1
-  }))
-  .add(TweenMax.to('#second-box', 0.5, {
-    opacity: 1,
-    delay: 0.2
-  }))
-  .add(TweenMax.to('#third-box', 0.5, {
-    opacity: 1,
-    delay: 0.3
-  }));
-
-
+  .add(
+    TweenMax.to(".a5", 0.3, {
+      opacity: 1,
+      delay: 0.1
+    })
+  )
+  .add(
+    TweenMax.to(".line", 0.9, {
+      width: "7%",
+      delay: 0.2
+    })
+  )
+  .add(
+    TweenMax.to("#first-box", 0.5, {
+      opacity: 1,
+      delay: 0.1
+    })
+  )
+  .add(
+    TweenMax.to("#second-box", 0.5, {
+      opacity: 1,
+      delay: 0.2
+    })
+  )
+  .add(
+    TweenMax.to("#third-box", 0.5, {
+      opacity: 1,
+      delay: 0.3
+    })
+  );
 
 // scrolmagic
 const controller = new ScrollMagic.Controller();
 
 const scene = new ScrollMagic.Scene({
-    triggerElement: '.s2',
-    // duration: 1000,
-  })
+  triggerElement: ".s2"
+  // duration: 1000,
+})
   .setTween(tween)
-  .addIndicators()
   .addTo(controller);
 
 // section 3 animation
 
-var tween2 = new TimelineMax()
-  .add(TweenMax.to('.line2', 2, {
-    width: '15%',
+var tween2 = new TimelineMax().add(
+  TweenMax.to(".line2", 2, {
+    width: "15%",
     delay: 0.3
-  }))
+  })
+);
 // doesnt work idk why
 // .add(TweenMax.to('.a6', 0.5, {opacity: 1}))
 // .add(TweenMax.to('.a7', 0.5, {opacity: 1}))
@@ -105,60 +113,74 @@ var tween2 = new TimelineMax()
 const controller2 = new ScrollMagic.Controller();
 
 const scene2 = new ScrollMagic.Scene({
-    triggerElement: '.s3'
-  })
+  triggerElement: ".s3"
+})
   .setTween(tween2)
-  .addIndicators()
-  .addTo(controller2)
+  .addTo(controller2);
 
 // section 4 animation
 
-var tween3 = new TimelineMax()
-  .add(TweenMax.to('.line3', 2, {
-    width: '15%',
+var tween3 = new TimelineMax().add(
+  TweenMax.to(".line3", 2, {
+    width: "15%",
     delay: 0.3
-  }))
+  })
+);
 
 const controller3 = new ScrollMagic.Controller();
 
 const scene3 = new ScrollMagic.Scene({
-    triggerElement: '.s4'
-  })
+  triggerElement: ".s4"
+})
   .setTween(tween3)
-  .addIndicators()
-  .addTo(controller3)
+  .addTo(controller3);
 
 // section 5 animation
 
-var tween4 = new TimelineMax()
-  .add(TweenMax.to('.line5', 2, {
-    width: '15%',
+var tween4 = new TimelineMax().add(
+  TweenMax.to(".line5", 2, {
+    width: "15%",
     delay: 0.3
-  }))
-
+  })
+);
 
 const controller4 = new ScrollMagic.Controller();
 
 const scene4 = new ScrollMagic.Scene({
-    triggerElement: '.s5'
-  })
+  triggerElement: ".s5"
+})
   .setTween(tween4)
-  .addIndicators()
-  .addTo(controller4)
+  .addTo(controller4);
 
 // section 6 animation
-  var tween5 = new TimelineMax()
-  .add(TweenMax.to('.box-line', 3, {
-    width: '36%',
+var tween5 = new TimelineMax().add(
+  TweenMax.to(".box-line", 3, {
+    width: "36%",
     delay: 0.3
-  }))
+  })
+);
 
 const controller5 = new ScrollMagic.Controller();
 
 const scene5 = new ScrollMagic.Scene({
-    triggerElement: '.s6'
-  })
+  triggerElement: ".s6"
+})
   .setTween(tween5)
-  .addIndicators()
-  .addTo(controller5)
+  .addTo(controller5);
 
+// section 7 animation
+var tween6 = new TimelineMax().add(
+  TweenMax.to(".box-line2", 3, {
+    width: "36%",
+    delay: 0.3
+  })
+);
+
+const controller6 = new ScrollMagic.Controller();
+
+const scene6 = new ScrollMagic.Scene({
+  triggerElement: "#s7-animation"
+})
+  .setTween(tween6)
+  .addIndicators()
+  .addTo(controller6);

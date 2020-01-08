@@ -279,6 +279,7 @@ header {
     button {
       @include green-btn;
       margin-top: 4rem;
+      @include transition;
     }
 
     .hand {
@@ -564,6 +565,11 @@ header {
 }
 
 .s6 {
+  svg {
+    margin-left: -65rem;
+      margin-top: -5rem;
+  }
+  
   background-color: #EFEFEF;
   .title {
     margin-top: 10rem;
@@ -616,5 +622,44 @@ header {
 // section 7
 
 .s7 {
+  svg {
+    position: absolute;
+    bottom: 0;
+  }
+
   background-color: #fff;
+  .box {
+    .box-line2 {
+      width: 20%;
+      background-color: $green;
+      top: 0;
+      position: absolute;
+      left: 0;
+      height: 5px;
+    }
+    -webkit-box-shadow: -7px 10px 24px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: -7px 10px 24px 0px rgba(0,0,0,0.4);
+    box-shadow: -7px 10px 24px 0px rgba(0,0,0,0.4);
+    ul {
+      padding-left: 2.5rem;
+      li {
+        color: #53575A;
+        font-size: 2.2rem;
+        padding-bottom: 1rem;
+      }
+    }
+    p {
+      border: 2px dashed $blue;
+      padding:1rem;
+      color: $blue;
+      font-size: 2.2rem;
+      font-weight: bold;
+    }
+    img {
+    position: absolute;
+    bottom: -4rem;
+    left: -4rem;
+    width: 114%;
+    }
+  }
 }
