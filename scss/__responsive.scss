@@ -84,4 +84,55 @@
         margin: 0 auto;
         display: flex;
     }
+
+    header .header-bg .header-top .logo {
+        text-align: center;
+    }
+
+    header .header-bg .header-top .phone {
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    .fire-dude {
+        display: none;
+    }
+
+    .hand {
+        display: none;
+    }
+
+    .line2,
+    .line5 {
+        bottom: 0;
+        top: 0 !important;
+    }
+
+    h2 {
+        text-align: center;
+
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .s3 .s3-bg {
+        justify-content: flex-start;
+    }
+
+    .s2 #third-box {
+        margin-bottom: 15rem;
+    }
+
+    .s3 .s3-bg button {
+        display: flex;
+        margin: 3rem auto;
+        justify-content: center;
+    }
+
+    .s7 .box img {
+        display: none;
+    }
+
 }
