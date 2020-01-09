@@ -1,7 +1,9 @@
 //fullpagejs
 
 new fullpage("#fullPage", {
-  autoScrolling: true
+  autoScrolling: true,
+  responsiveWidth: 800,
+  responsiveWidth: 1000,
 });
 
 // move section down one
@@ -182,7 +184,6 @@ const scene6 = new ScrollMagic.Scene({
     triggerElement: "#s7-animation"
   })
   .setTween(tween6)
-  .addIndicators()
   .addTo(controller6);
 
 // section 8 animation
@@ -199,13 +200,11 @@ const scene7 = new ScrollMagic.Scene({
     triggerElement: "#s-8"
   })
   .setTween(tween7)
-  .addIndicators()
   .addTo(controller7);
 
 // let clickPlus = 0;
 
 // $('#plus').click(function () {
-
 
 //   if (clickPlus == 0) {
 //     $('.svgs svg:first-child').removeClass('active-svg');
@@ -218,29 +217,29 @@ const scene7 = new ScrollMagic.Scene({
 //   console.log(clickPlus);
 // });
 
-$('#plus').click(function () {
-  var clicks = $(this).data('clicks');
+$("#plus").click(function () {
+  var clicks = $(this).data("clicks");
   if (clicks) {
-    $('.svgs svg:first-child').removeClass('active-svg');
-    $('#two').removeClass('active-svg');
-    $('.svgs svg:last-child').addClass('active-svg');
+    $(".svgs svg:first-child").removeClass("active-svg");
+    $("#two").removeClass("active-svg");
+    $(".svgs svg:last-child").addClass("active-svg");
   } else {
-    $('.svgs svg:first-child').removeClass('active-svg');
-    $('#two').addClass('active-svg');
+    $(".svgs svg:first-child").removeClass("active-svg");
+    $("#two").addClass("active-svg");
     // $('#two').removeClass('active-svg');
-    $('.svgs svg:last-child').removeClass('active-svg');
+    $(".svgs svg:last-child").removeClass("active-svg");
   }
   $(this).data("clicks", !clicks);
 });
 
-$('#minus').click(function () {
-  var clicks = $(this).data('clicks');
+$("#minus").click(function () {
+  var clicks = $(this).data("clicks");
   if (clicks) {
-    $('.svgs svg:first-child').addClass('active-svg');
-    $('#two').removeClass('active-svg');
+    $(".svgs svg:first-child").addClass("active-svg");
+    $("#two").removeClass("active-svg");
   } else {
-    $('.svgs svg:last-child').removeClass('active-svg');
-    $('#two').addClass('active-svg');
+    $(".svgs svg:last-child").removeClass("active-svg");
+    $("#two").addClass("active-svg");
     // $('.svgs svg:first-child').addClass('active-svg');
   }
   $(this).data("clicks", !clicks);
@@ -249,7 +248,6 @@ $('#minus').click(function () {
 // let clickMinus = 0;
 
 // $('#minus').click(function () {
-
 
 //   if (clickMinus == 0) {
 //     $('.svgs svg:last-child').removeClass('active-svg');

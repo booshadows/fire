@@ -158,6 +158,10 @@ header {
       position: absolute;
       right: 19%;
       bottom: -4%;
+
+      img {
+        width: 44rem;
+      }
     }
 
     .move-down {
@@ -296,6 +300,10 @@ header {
       position: absolute;
       right: 0;
       bottom: 0;
+
+      img {
+        width: 38rem;
+      }
     }
   }
 }
@@ -304,6 +312,10 @@ header {
 //  section 4
 
 .s4 {
+  img {
+    width: 40rem;
+  }
+
   background-color: #EFEFEF;
 
   .title {
@@ -568,6 +580,10 @@ header {
 }
 
 .s5 {
+  img {
+    width: 43rem;
+  }
+
   .line5 {
     @include line;
     top: 10rem;
@@ -575,9 +591,15 @@ header {
 }
 
 .s6 {
+  img {
+    width: 40rem;
+  }
+
   svg {
     margin-left: -65rem;
     margin-top: -5rem;
+    position: absolute;
+    bottom: 0;
   }
 
   background-color: #EFEFEF;
@@ -782,3 +804,5 @@ header {
     font-weight: bold;
   }
 }
+
+@import './_responsive';
