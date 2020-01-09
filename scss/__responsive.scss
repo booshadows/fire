@@ -28,3 +28,60 @@
         font-size: 7px
     }
 }
+
+@media only screen and (max-width:992px) {
+    .s6 svg {
+        display: none;
+    }
+
+    .s7 .box img {
+        bottom: -9rem;
+    }
+
+    .s8 .container-in {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .rainbow svg {
+        width: 60%;
+    }
+
+    .s4 .accordition .number-menu {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:576px) {
+    header {
+        .header-bg {
+            .header-center {
+                h2 {
+                    text-align: center;
+                }
+
+                p {
+                    text-align: center;
+                }
+
+                button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    .s4 img,
+    .s8 .title h2 img {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .s6 img {
+        margin: 0 auto;
+        display: flex;
+    }
+}
